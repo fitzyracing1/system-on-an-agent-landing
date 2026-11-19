@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>System on an Agent</title>
+  <meta name="description" content="A system on a chip, but on an agent. Planner as the processor, memory and skills as storage, connectors as input and output, and a bus connecting them.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0e1014">
+  <meta property="og:title" content="System on an Agent">
+  <meta property="og:description" content="A system on a chip, but on an agent.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fitzyracing1.github.io/system-on-an-agent-landing/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="./" aria-label="System on an Agent home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28">
+            <rect x="3" y="3" width="26" height="26" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="7" y="7" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.25"/>
+            <rect x="17" y="7" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.25"/>
+            <rect x="7" y="17" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.25"/>
+            <rect x="17" y="17" width="8" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.25"/>
+          </svg>
+        </span>
+        <span class="brand-name">System on an Agent</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="https://github.com/fitzyracing1/system-on-an-agent">Repository</a>
+        <a href="https://github.com/fitzyracing1/system-on-an-agent/pull/1">PR #1</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">System on an Agent</p>
+        <p class="hero-line">Instead of system on a chip, system on an agent.</p>
+        <h1>
+          A system on a chip,<br>
+          <em>but on an agent.</em>
+        </h1>
+        <p class="lede">
+          A system on a chip puts a CPU, memory, I/O, and a bus on one piece of silicon.
+          A system on an agent puts the same parts into one agent: a planner as the processor,
+          memory and skills as storage, connectors as input and output, and a bus that ties them together.
+        </p>
+        <p class="cta">
+          <a class="btn btn-primary" href="https://github.com/fitzyracing1/system-on-an-agent">View the repository</a>
+          <a class="btn btn-ghost" href="https://github.com/fitzyracing1/system-on-an-agent/pull/1">Read the core PR</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="mapping" id="mapping" aria-labelledby="mapping-title">
+      <div class="wrap">
+        <h2 id="mapping-title">The same blocks, retitled</h2>
+        <p class="section-lede">
+          The floorplan stays the same. Each SoC block has a counterpart on the agent.
+        </p>
+
+        <figure class="dies" aria-describedby="mapping-legend">
+          <figcaption class="visually-hidden">
+            Mapping from a system on a chip to a system on an agent:
+            CPU to planner, memory to memory and skills, I/O to connectors, and bus to bus or router.
+          </figcaption>
+
+          <article class="package" aria-label="System on a Chip">
+            <header class="package-head">
+              <span class="package-kicker">System on a Chip</span>
+              <span class="package-id">SoC</span>
+            </header>
+            <div class="die" role="group" aria-label="SoC floorplan">
+              <div class="block" data-key="cpu">
+                <span class="block-role">Processor</span>
+                <strong>CPU</strong>
+              </div>
+              <div class="block" data-key="mem">
+                <span class="block-role">Storage</span>
+                <strong>Memory</strong>
+              </div>
+              <div class="block" data-key="io">
+                <span class="block-role">Input / output</span>
+                <strong>I/O</strong>
+              </div>
+              <div class="block" data-key="bus">
+                <span class="block-role">Interconnect</span>
+                <strong>Bus</strong>
+              </div>
+            </div>
+          </article>
+
+          <div class="traces" aria-hidden="true">
+            <svg viewBox="0 0 80 280" preserveAspectRatio="none" focusable="false">
+              <path d="M0 35 H32 C44 35 36 35 48 35 H80" />
+              <path d="M0 105 H32 C44 105 36 105 48 105 H80" />
+              <path d="M0 175 H32 C44 175 36 175 48 175 H80" />
+              <path d="M0 245 H32 C44 245 36 245 48 245 H80" />
+              <circle cx="8" cy="35" r="3" />
+              <circle cx="8" cy="105" r="3" />
+              <circle cx="8" cy="175" r="3" />
+              <circle cx="8" cy="245" r="3" />
+              <circle cx="72" cy="35" r="3" />
+              <circle cx="72" cy="105" r="3" />
+              <circle cx="72" cy="175" r="3" />
+              <circle cx="72" cy="245" r="3" />
+            </svg>
+          </div>
+
+          <article class="package package-soa" aria-label="System on an Agent">
+            <header class="package-head">
+              <span class="package-kicker">System on an Agent</span>
+              <span class="package-id">SoA</span>
+            </header>
+            <div class="die" role="group" aria-label="SoA floorplan">
+              <div class="block" data-key="cpu">
+                <span class="block-role">Processor</span>
+                <strong>Planner</strong>
+              </div>
+              <div class="block" data-key="mem">
+                <span class="block-role">Storage</span>
+                <strong>Memory + Skills</strong>
+              </div>
+              <div class="block" data-key="io">
+                <span class="block-role">Input / output</span>
+                <strong>Connectors</strong>
+              </div>
+              <div class="block" data-key="bus">
+                <span class="block-role">Interconnect</span>
+                <strong>Bus / Router</strong>
+              </div>
+            </div>
+          </article>
+        </figure>
+
+        <ul class="legend" id="mapping-legend">
+          <li><span>CPU</span><span class="arrow" aria-hidden="true">→</span><span>Planner</span></li>
+          <li><span>Memory</span><span class="arrow" aria-hidden="true">→</span><span>Memory + Skills</span></li>
+          <li><span>I/O</span><span class="arrow" aria-hidden="true">→</span><span>Connectors</span></li>
+          <li><span>Bus</span><span class="arrow" aria-hidden="true">→</span><span>Bus / Router</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="core" id="core" aria-labelledby="core-title">
+      <div class="wrap">
+        <h2 id="core-title">The core</h2>
+        <p class="section-lede">
+          Four parts, and only these four. Optional add-ons plug in later, beside the core, never into it.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <p class="card-kicker">Processor</p>
+            <h3>Planner</h3>
+            <p>
+              Takes a goal, builds a plan, and runs it step by step. The default planner is
+              deterministic and rule-based; no language model is required. An optional
+              language-model provider can be attached later. If the model fails to return a
+              valid plan, the rule-based planner is the fallback.
+            </p>
+          </article>
+          <article class="card">
+            <p class="card-kicker">Storage</p>
+            <h3>Memory and skills</h3>
+            <p>
+              Working memory holds short-lived values for the current run. Long-term memory
+              stores facts, optionally persisted as JSON. The skill library is a set of
+              reusable named procedures the planner can run.
+            </p>
+          </article>
+          <article class="card">
+            <p class="card-kicker">Input / output</p>
+            <h3>Connectors</h3>
+            <p>
+              A pluggable I/O surface. The core ships a local file connector and an echo
+              (mock) connector, and new connectors can be registered on the same interface.
+            </p>
+          </article>
+          <article class="card">
+            <p class="card-kicker">Interconnect</p>
+            <h3>Bus / Router</h3>
+            <p>
+              Routes messages between the planner, memory, skills, and connectors, and fires
+              add-on hooks around each step without those add-ons living in the core.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="quickstart" id="quickstart" aria-labelledby="quickstart-title">
+      <div class="wrap">
+        <h2 id="quickstart-title">Quickstart</h2>
+        <p class="section-lede">
+          Python 3.10 or newer. The demo below is a real run of the mock connector,
+          from the core on this repository.
+        </p>
+        <figure class="terminal">
+          <figcaption>
+            <span class="traffic" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>soa run</span>
+          </figcaption>
+          <pre><code><span class="prompt">$</span> python -m pip install -e <span class="str">".[dev]"</span>
+<span class="prompt">$</span> soa run <span class="str">"echo hello from system on an agent"</span>
+<span class="key">goal:</span> echo hello from system on an agent
+<span class="key">plan:</span> 1 step (rules)
+  1. Send "hello from system on an agent" through the echo connector
+<span class="key">ok:</span> <span class="ok">true</span>
+<span class="key">output:</span> hello from system on an agent</code></pre>
+        </figure>
+        <p class="fine">
+          Also available: <code>soa skills list</code> and <code>soa connectors list</code>.
+        </p>
+      </div>
+    </section>
+
+    <section class="addons" id="addons" aria-labelledby="addons-title">
+      <div class="wrap">
+        <h2 id="addons-title">Optional add-ons</h2>
+        <p class="section-lede">
+          Add-ons sit beside the core. They never live inside it, and loading or omitting
+          them does not require a core change. Load one from a Python file or a directory
+          with <code>soa_addon.py</code> or <code>addon.py</code>. It declares a manifest
+          and the hooks it implements.
+        </p>
+        <pre class="hooks" tabindex="0"><code>soa --addon path/to/addon.py run "echo hello"
+
+before_plan(plan, context)
+after_plan(plan, report, context)
+before_step(step, context)
+after_step(step, result, context)
+on_error(step, error, context)</code></pre>
+        <p class="section-lede slots-intro">
+          Two names are reserved for later work. They are documented as placeholders only:
+          there is no implementation and no dependency for either one in the core.
+        </p>
+        <div class="slots">
+          <article class="slot">
+            <p class="slot-badge">Future add-on</p>
+            <h3>heatgate</h3>
+            <p>
+              Power throttling from measured temperature and grid readings. A future
+              heatgate add-on would hook <code>before_step</code> to pause, delay, or skip
+              work when those readings are high. It would be optional power management,
+              not part of the processor, storage, or I/O of the agent itself.
+            </p>
+          </article>
+          <article class="slot">
+            <p class="slot-badge">Future add-on</p>
+            <h3>lex-loop</h3>
+            <p>
+              An 8-step robot loop (READ → RESTART) used as a clock. A future lex-loop
+              add-on would hook plan execution so each tick advances one phase of that
+              loop. It would be an optional clock, not part of the core planner.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="start" id="install" aria-labelledby="install-title">
+      <div class="wrap">
+        <h2 id="install-title">Get started</h2>
+        <p class="section-lede">
+          Clone the repository, install the package, and run a goal through the mock connector.
+        </p>
+        <p class="cta">
+          <a class="btn btn-primary" href="#quickstart">Get started</a>
+          <a class="btn btn-ghost" href="https://github.com/fitzyracing1/system-on-an-agent">View on GitHub</a>
+        </p>
+        <div class="install-bar" id="install-command">
+          <pre><code>pip install -e ".[dev]"
+soa run "echo hello from system on an agent"</code></pre>
+          <button type="button" class="copy-btn" data-copy="pip install -e &quot;.[dev]&quot;&#10;soa run &quot;echo hello from system on an agent&quot;">Copy</button>
+        </div>
+        <div class="icon-cards">
+          <article class="card icon-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.2 2.2M16.2 16.2l2.2 2.2M18.4 5.6l-2.2 2.2M7.8 16.2l-2.2 2.2"/>
+              </svg>
+            </span>
+            <h3>Planner</h3>
+            <p>The processor. It turns a goal into a plan and runs it step by step, with no language model required.</p>
+          </article>
+          <article class="card icon-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="6" rx="1.5"/>
+                <rect x="3" y="14" width="18" height="6" rx="1.5"/>
+                <path d="M7 7h4M7 17h6"/>
+              </svg>
+            </span>
+            <h3>Memory and skills</h3>
+            <p>Storage for the run, long-term facts, and a library of reusable named procedures.</p>
+          </article>
+          <article class="card icon-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 8H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h3"/>
+                <path d="M16 8h3a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-3"/>
+                <path d="M8 12h8"/>
+              </svg>
+            </span>
+            <h3>Connectors</h3>
+            <p>Pluggable input and output, including a local file connector and an echo (mock) connector.</p>
+          </article>
+          <article class="card icon-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="5" cy="12" r="2.2"/>
+                <circle cx="19" cy="6" r="2.2"/>
+                <circle cx="19" cy="18" r="2.2"/>
+                <path d="M7.1 11.2 16.8 7.2M7.1 12.8 16.8 16.8"/>
+              </svg>
+            </span>
+            <h3>Bus / Router</h3>
+            <p>The interconnect that routes messages between the other parts and fires add-on hooks.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap bar">
+      <p>MIT License. Copyright (c) 2026 Joshua Almeida.</p>
+      <p class="footer-links">
+        <a href="https://github.com/fitzyracing1/system-on-an-agent">Repository</a>
+        <a href="https://github.com/fitzyracing1/system-on-an-agent/pull/1">PR #1</a>
+        <a href="https://github.com/fitzyracing1/system-on-an-agent/blob/main/LICENSE">License</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      document.querySelectorAll(".copy-btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var text = btn.getAttribute("data-copy") || "";
+          function done() {
+            var prior = btn.textContent;
+            btn.textContent = "Copied";
+            window.setTimeout(function () { btn.textContent = prior; }, 1600);
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done).catch(fallback);
+          } else {
+            fallback();
+          }
+          function fallback() {
+            var field = document.createElement("textarea");
+            field.value = text;
+            field.setAttribute("readonly", "");
+            field.style.position = "fixed";
+            field.style.left = "-9999px";
+            document.body.appendChild(field);
+            field.select();
+            try { document.execCommand("copy"); done(); } catch (err) {}
+            document.body.removeChild(field);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+
+</html>
